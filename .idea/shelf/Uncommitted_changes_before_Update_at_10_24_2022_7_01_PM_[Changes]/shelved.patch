@@ -1,0 +1,107 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># final_project
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision c1dc3f1a2b718c146ccd1daa3a4082b14f49642b)
++++ b/README.md	(date 1666627215004)
+@@ -1,1 +1,2 @@
+-# final_project
+\ No newline at end of file
++# final_project
++
+Index: test.txt
+===================================================================
+diff --git a/test.txt b/test.txt
+deleted file mode 100644
+--- a/test.txt	(revision c1dc3f1a2b718c146ccd1daa3a4082b14f49642b)
++++ /dev/null	(revision c1dc3f1a2b718c146ccd1daa3a4082b14f49642b)
+@@ -1,3 +0,0 @@
+-Hello World
+-
+-This is a txt file 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"918edf96-9b8e-48ed-a78b-40c96674e4d7\" name=\"Changes\" comment=\"idea workspace\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Python Script\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"initialize_project/eL-1\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">\r\n    <option name=\"selectedUrlAndAccountId\">\r\n      <UrlAndAccount>\r\n        <option name=\"accountId\" value=\"9bf58371-4295-4a4b-9d8c-b026f3582435\" />\r\n        <option name=\"url\" value=\"git@github.com:alexvucina/FinalProjectSDA.git\" />\r\n      </UrlAndAccount>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2GXs2JQNL2UDlr3CddFwmys5Qxf\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"DefaultHtmlFileTemplate\": \"HTML File\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"last_opened_file_path\": \"C:/Python/djangoProject\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"FinalProjectSDA\" type=\"Python.DjangoServer\" factoryName=\"Django server\">\r\n      <module name=\"FinalProjectSDA\" />\r\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\r\n      <option name=\"PARENT_ENVS\" value=\"true\" />\r\n      <envs>\r\n        <env name=\"PYTHONUNBUFFERED\" value=\"1\" />\r\n        <env name=\"DJANGO_SETTINGS_MODULE\" value=\"FinalProjectSDA.settings\" />\r\n      </envs>\r\n      <option name=\"SDK_HOME\" value=\"C:\\Python\\FinalProjectSDA\\venv\\Scripts\\python.exe\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\r\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\r\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\r\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\r\n      <option name=\"launchJavascriptDebuger\" value=\"false\" />\r\n      <option name=\"port\" value=\"8001\" />\r\n      <option name=\"host\" value=\"\" />\r\n      <option name=\"additionalOptions\" value=\"\" />\r\n      <option name=\"browserUrl\" value=\"\" />\r\n      <option name=\"runTestServer\" value=\"false\" />\r\n      <option name=\"runNoReload\" value=\"false\" />\r\n      <option name=\"useCustomRunCommand\" value=\"false\" />\r\n      <option name=\"customRunCommand\" value=\"\" />\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"918edf96-9b8e-48ed-a78b-40c96674e4d7\" name=\"Changes\" comment=\"\" />\r\n      <created>1666546054633</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1666546054633</updated>\r\n      <workItem from=\"1666546098239\" duration=\"8249000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"start Django\">\r\n      <created>1666548105430</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666548105430</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"start student\">\r\n      <created>1666549693575</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666549693575</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"start student\">\r\n      <created>1666549706038</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666549706038</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"start student\">\r\n      <created>1666624705707</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666624705707</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"start student\">\r\n      <created>1666625079277</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666625079277</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"start student\">\r\n      <created>1666626233299</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666626233299</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"idea workspace\">\r\n      <created>1666626908289</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1666626908289</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"8\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"start Django\" />\r\n    <MESSAGE value=\"start student\" />\r\n    <MESSAGE value=\"idea workspace\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"idea workspace\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision c1dc3f1a2b718c146ccd1daa3a4082b14f49642b)
++++ b/.idea/workspace.xml	(date 1666627215002)
+@@ -1,7 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
++<<<<<<< HEAD
+     <list default="true" id="918edf96-9b8e-48ed-a78b-40c96674e4d7" name="Changes" comment="idea workspace" />
++=======
++    <list default="true" id="918edf96-9b8e-48ed-a78b-40c96674e4d7" name="Changes" comment="start student">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
++>>>>>>> initialize_project/eL-1
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -16,11 +22,14 @@
+     </option>
+   </component>
+   <component name="Git.Settings">
++<<<<<<< HEAD
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+         <entry key="$PROJECT_DIR$" value="initialize_project/eL-1" />
+       </map>
+     </option>
++=======
++>>>>>>> initialize_project/eL-1
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GithubPullRequestsUISettings">
+@@ -85,7 +94,11 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1666546054633</updated>
++<<<<<<< HEAD
+       <workItem from="1666546098239" duration="8249000" />
++=======
++      <workItem from="1666546098239" duration="7942000" />
++>>>>>>> initialize_project/eL-1
+     </task>
+     <task id="LOCAL-00001" summary="start Django">
+       <created>1666548105430</created>
+@@ -129,6 +142,7 @@
+       <option name="project" value="LOCAL" />
+       <updated>1666626233299</updated>
+     </task>
++<<<<<<< HEAD
+     <task id="LOCAL-00007" summary="idea workspace">
+       <created>1666626908289</created>
+       <option name="number" value="00007" />
+@@ -137,6 +151,9 @@
+       <updated>1666626908289</updated>
+     </task>
+     <option name="localTasksCounter" value="8" />
++=======
++    <option name="localTasksCounter" value="7" />
++>>>>>>> initialize_project/eL-1
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -156,7 +173,11 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="start Django" />
+     <MESSAGE value="start student" />
++<<<<<<< HEAD
+     <MESSAGE value="idea workspace" />
+     <option name="LAST_COMMIT_MESSAGE" value="idea workspace" />
++=======
++    <option name="LAST_COMMIT_MESSAGE" value="start student" />
++>>>>>>> initialize_project/eL-1
+   </component>
+ </project>
+\ No newline at end of file
