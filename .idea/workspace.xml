@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="918edf96-9b8e-48ed-a78b-40c96674e4d7" name="Changes" comment="start student" />
+    <list default="true" id="918edf96-9b8e-48ed-a78b-40c96674e4d7" name="Changes" comment="start student">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666546054633</updated>
-      <workItem from="1666546098239" duration="6258000" />
+      <workItem from="1666546098239" duration="7329000" />
     </task>
     <task id="LOCAL-00001" summary="start Django">
       <created>1666548105430</created>
@@ -110,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666624705707</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="start student">
+      <created>1666625079277</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666625079277</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
