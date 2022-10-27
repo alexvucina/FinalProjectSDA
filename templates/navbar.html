@@ -18,7 +18,7 @@
                     </a>
                     <ul class="dropdown-menu">
 {#                        {% if perms.student.add_student %}#}
-                            <li><a class="dropdown-item" href="#">Create a new student</a>
+                            <li><a class="dropdown-item" href="{% url 'create_student' %}">Create a new student</a>
                             </li>
 {#                        {% endif %}#}
 {#                        {% if perms.student.view_list_of_students %}#}
