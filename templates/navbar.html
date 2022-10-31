@@ -36,7 +36,7 @@
                     </a>
                     <ul class="dropdown-menu">
 {#                        {% if perms.trainer.add_trainer %}#}
-                            <li><a class="dropdown-item" href="#">Create a new teacher</a>
+                            <li><a class="dropdown-item" href="{% url 'create_teacher' %}">Create a new teacher</a>
                             </li>
 {#                        {% endif %}#}
 {#                        {% if perms.trainer.view_list_of_trainers %}#}

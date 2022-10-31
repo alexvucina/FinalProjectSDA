@@ -1,12 +1,27 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 
 from parent.models import Parent
 
-GENRE_CHOICES = [(1, 'Male'), (2, 'Female')]
-# ENROLLMENT_CHOICES = [
-#     (0, 'Preparatory class'),
-#     ('1st grade', 'First grade'),
-# ]
+GENRE_CHOICES = [('male', 'Male'), ('female', 'Female')]
+
+ENROLLMENT_CHOICES = [
+    ('Preparatory class', 'Preparatory class'),
+    ('1', '1st grade'),
+    ('2nd grade', '2nd grade'),
+    ('3rd grade', '3rd grade'),
+    ('4th grade', '4th grade'),
+    ('5th grade', '5th grade'),
+    ('6th grade', '6th grade'),
+    ('7th grade', '7th grade'),
+    ('8th grade', '8th grade'),
+
+]
+
+
+def cnp(value):
+    if not value.isdigit() or not len(str(value))==13:
+        raise ValidationError('CNP must contain only numbers of minimum length of 13')
 
 
 class Student(models.Model):
@@ -14,8 +29,8 @@ class Student(models.Model):
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
     genre = models.CharField(max_length=6, choices=GENRE_CHOICES)
-    CNP = models.IntegerField()
-    # enrollment = models.CharField(max_length=17, choices=ENROLLMENT_CHOICES)
+    CNP = models.CharField(max_length=13, validators=[cnp])
+    enrollment = models.CharField(max_length=17, choices=ENROLLMENT_CHOICES)
 
     active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)

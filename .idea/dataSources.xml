@@ -10,7 +10,7 @@
       <jdbc-url>jdbc:sqlite:C:\Python\FinalProjectSDA\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="db.sqlite3" uuid="02e6f33d-4b57-44c4-b901-7acd883ff3eb">
+    <data-source source="LOCAL" name="db.sqlite3" uuid="3c5d90cc-4f9d-44a7-9542-7b7929e82f15">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
