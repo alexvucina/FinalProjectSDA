@@ -18,11 +18,11 @@
                     </a>
                     <ul class="dropdown-menu">
 {#                        {% if perms.student.add_student %}#}
-                            <li><a class="dropdown-item" href="{% url 'create_student' %}">Create a new student</a>
+                            <li><a class="dropdown-item" href="{% url 'create-student' %}">Create a new student</a>
                             </li>
 {#                        {% endif %}#}
 {#                        {% if perms.student.view_list_of_students %}#}
-                            <li><a class="dropdown-item" href="{% url 'list_of_students' %}">List of students</a>
+                            <li><a class="dropdown-item" href="{% url 'list-of-students' %}">List of students</a>
                             </li>
 {#                        {% endif %}#}
                     </ul>
@@ -35,12 +35,12 @@
                         Teachers
                     </a>
                     <ul class="dropdown-menu">
-{#                        {% if perms.trainer.add_trainer %}#}
-                            <li><a class="dropdown-item" href="{% url 'create_teacher' %}">Create a new teacher</a>
+{#                        {% if perms.teacher.add_teacher %}#}
+                            <li><a class="dropdown-item" href="{% url 'create-teacher' %}">Create a new teacher</a>
                             </li>
 {#                        {% endif %}#}
-{#                        {% if perms.trainer.view_list_of_trainers %}#}
-                            <li><a class="dropdown-item" href="#">List of teachers</a>
+{#                        {% if perms.teacher.view_list_of_teachers %}#}
+                            <li><a class="dropdown-item" href="{% url 'list-of-teachers' %}">List of teachers</a>
                             </li>
 {#                        {% endif %}#}
                     </ul>
@@ -61,7 +61,7 @@
                 </li>
 
             </ul>
-            {% if request.user.is_authenticated %}
+{#            {% if request.user.is_authenticated %}#}
                 <div class="btn-group">
                     <button type="button" class="btn btn-outline-info dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -73,10 +73,10 @@
 
                     </ul>
                 </div>
-            {% else %}
+{#            {% else %}#}
                 <a href="#" class="btn btn-success me-2">Login</a>
                 <a href="#" class="btn btn-primary">Sign up</a>
-            {% endif %}
+{#            {% endif %}#}
         </div>
     </div>
 </nav>

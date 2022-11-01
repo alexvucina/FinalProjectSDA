@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %} List of teachers {% endblock %}
+
+{% block content %}
+    <br>
+    <div class="container-fluid">
+        <div class="row gx-5 gy-5">
+            {% for teacher in teachers %}
+                <div class="col-md-4 ">
+                    <div class="card border">
+                        <div class="card text-white bg-warning mb-3">
+                            <div class="card-header bg-transparent border-warning">{{ teacher.first_name }} {{ teacher.last_name }}</div>
+                            <div class="card-body">
+                                <h5 class="card-title ">{{ teacher.email }}</h5>
+                            </div>
+                            <div class="card-footer">
+                                <div class="dropdown">
+                                    <button class="btn btn-light dropdown-toggle" type="button"
+                                            data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                        Actions
+                                    </button>
+                                    <ul class="dropdown-menu">
+{#                                        {% if perms.teacher.teacher %}#}
+                                            <li><a class="dropdown-item" href="{% url 'update-teacher' teacher.id %}">Update</a>
+                                            </li>
+{#                                        {% endif %}#}
+{#                                        {% if perms.teacher.teacher %}#}
+                                            <li><a class="dropdown-item" href="{% url 'delete-teacher' teacher.id %}">Delete</a>
+                                            </li>
+{#                                        {% endif %}#}
+{#                                        {% if perms.teacher.teacher %}#}
+                                            <li><a class="dropdown-item" href="{% url 'details-teacher' teacher.id %}">View
+                                                details</a></li>
+{#                                        {% endif %}#}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}
