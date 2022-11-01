@@ -3,18 +3,18 @@ from django.db import models
 
 from parent.models import Parent
 
-GENRE_CHOICES = [('male', 'Male'), ('female', 'Female')]
+GENDER_CHOICES = [('0', 'Male'), ('1', 'Female')]
 
 ENROLLMENT_CHOICES = [
-    ('Preparatory class', 'Preparatory class'),
+    ('0', 'Preparatory class'),
     ('1', '1st grade'),
-    ('2nd grade', '2nd grade'),
-    ('3rd grade', '3rd grade'),
-    ('4th grade', '4th grade'),
-    ('5th grade', '5th grade'),
-    ('6th grade', '6th grade'),
-    ('7th grade', '7th grade'),
-    ('8th grade', '8th grade'),
+    ('2', '2nd grade'),
+    ('3', '3rd grade'),
+    ('4', '4th grade'),
+    ('5', '5th grade'),
+    ('6', '6th grade'),
+    ('7', '7th grade'),
+    ('8', '8th grade'),
 
 ]
 
@@ -28,7 +28,7 @@ class Student(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     date_of_birth = models.DateField()
-    genre = models.CharField(max_length=6, choices=GENRE_CHOICES)
+    gender = models.CharField(max_length=6, choices=GENDER_CHOICES)
     CNP = models.CharField(max_length=13, validators=[cnp])
     enrollment = models.CharField(max_length=17, choices=ENROLLMENT_CHOICES)
 
