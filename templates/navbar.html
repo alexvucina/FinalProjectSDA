@@ -52,10 +52,10 @@
                     </a>
                     <ul class="dropdown-menu">
 {#                        {% if perms.book.add_book %}#}
-                            <li><a class="dropdown-item" href="#">Create a new parent</a></li>
+                            <li><a class="dropdown-item" href="{% url 'create-parent' %}">Create a new parent</a></li>
 {#                        {% endif %}#}
 {#                        {% if perms.book.view_list_of_books %}#}
-                            <li><a class="dropdown-item" href="#">List of parents</a></li>
+                            <li><a class="dropdown-item" href="{% url 'list-of-parents' %}">List of parents</a></li>
 {#                        {% endif %}#}
                     </ul>
                 </li>

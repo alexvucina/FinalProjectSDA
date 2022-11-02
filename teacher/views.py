@@ -42,4 +42,4 @@ class TeacherDeleteView(DeleteView):
 class TeacherDetailView(DetailView):
     template_name = 'teacher/details_teacher.html'
     model = Teacher
-    permission_required = 'teacher.view_teacher_details'
+

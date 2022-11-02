@@ -27,8 +27,11 @@
                         <thead>
                         <tr>
                             <th>Fullname</th>
-                            <th>Start date</th>
-                            <th>End date</th>
+                            <th>Status</th>
+                            <th>Date of birth</th>
+                            <th>Gender</th>
+                            <th>CNP</th>
+                            <th>Enrollment</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -36,6 +39,12 @@
                         <tbody>
                         {% for student in all_students %}
                             <tr>
+                                <td>{{ student.last_name }} {{ student.first_name }}</td>
+                                <td>{{ student.status }}</td>
+                                <td>{{ student.date_of_birth}}</td>
+                                <td>{{ student.gender}}</td>
+                                <td>{{ student.CNP}}</td>
+                                <td>{{ student.enrollment}}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-light dropdown-toggle" type="button"
@@ -51,14 +60,6 @@
                                                 <li><a class="dropdown-item"
                                                        href="{% url 'delete-student' student.id %}">Delete</a></li>
                                             {% endif %}
-                                            {% if perms.student.delete_by_modal %}
-                                                <li>
-                                                    <button type="button" class="dropdown-item" data-bs-toggle="modal"
-
-                                                            data-bs-target="#student_{{ student.id }}">Delete (Modal)
-                                                    </button>
-                                                </li>
-                                            {% endif %}
                                             {% if perms.student.view_student_details %}
                                                 <li><a class="dropdown-item"
                                                        href="{% url 'details-student' student.id %}">View
@@ -68,33 +69,6 @@
                                     </div>
                                 </td>
                             </tr>
-                            {% if perms.student.delete_by_modal %}
-                                <div class="modal fade" id="student_{{ student.id }}" tabindex="-1"
-                                     aria-labelledby="exampleModalLabel"
-                                     aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Delete
-                                                    - {{ student.first_name }} {{ student.last_name }}</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                        aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body">
-                                                Are you sure to delete {{ student.first_name }} {{ student.last_name }}
-                                                ?
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                                                    No
-                                                </button>
-                                                <a href="{% url 'delete-student-modal' student.id %}"
-                                                   class="btn btn-danger">Yes</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            {% endif %}
                         {% endfor %}
                         </tbody>
                     </table>

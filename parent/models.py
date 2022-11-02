@@ -1,11 +1,21 @@
+from django.core.exceptions import ValidationError
 from django.db import models
+
+PARENT_TYPE = [('Mother', 'Mother'), ('Father', 'Father'), ('Grandmother', 'Grandmother'),
+               ('Grandfather', 'Grandfather')]
+
+
+def phone(value):
+    if not value.isdigit() or not len(str(value)) == 10:
+        raise ValidationError('Please enter only digits')
 
 
 class Parent(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    phone = models.IntegerField()
-    email = email = models.EmailField(max_length=50)
+    phone_number = models.IntegerField()
+    email = models.CharField(max_length=30, validators=[phone])
+    parent_type = models.CharField(max_length=11, choices=PARENT_TYPE)
 
     active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, UpdateView, DeleteView, DetailView
 
 from student.filters import StudentFilter
 from student.forms import StudentForm
@@ -25,11 +25,9 @@ class StudentsListView(ListView):
     template_name = 'student/list_of_students.html'
     model = Student
     context_object_name = 'all_students'
-    permission_required = 'student.view_list_of_students'
 
     def get_context_data(self, **kwargs):
         data = super(StudentsListView, self).get_context_data(**kwargs)
-
         students = Student.objects.all()
         my_filter = StudentFilter(self.request.GET, queryset=students)
         students = my_filter.qs
@@ -37,3 +35,21 @@ class StudentsListView(ListView):
         data['my_filter'] = my_filter.form
 
         return data
+
+
+class StudentUpdateView(UpdateView):
+    template_name = 'student/update_student.html'
+    model = Student
+    form_class = StudentForm
+    success_url = reverse_lazy('list-of-students')
+
+
+class StudentDeleteView(DeleteView):
+    template_name = 'student/delete_student.html'
+    model = Student
+    success_url = reverse_lazy('list-of-students')
+
+
+class StudentDetailView(DetailView):
+    template_name = 'student/details_student.html'
+    model = Student
