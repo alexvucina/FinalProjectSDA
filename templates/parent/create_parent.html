@@ -12,8 +12,8 @@
                 </div>
 
             <form method="post">
-                {% csrf_token %}
                 <div class="card-body">
+                    {% csrf_token %}
                     {{ form.as_p }}
                 </div>
                 <div class="card-footer text-center">

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'teacher',
     'parent',
     'administration',
+    'userextend',
 ]
 
 MIDDLEWARE = [

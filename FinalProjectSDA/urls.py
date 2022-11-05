@@ -23,5 +23,7 @@ urlpatterns = [
     path('', include('teacher.urls')),
     path('', include('parent.urls')),
     path('', include('administration.urls')),
+    path('', include('django.contrib.auth.urls')),
+    path('', include('userextend.urls')),
 
 ]

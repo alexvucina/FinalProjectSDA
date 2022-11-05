@@ -14,7 +14,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ student }}</h5>
                         <p class="card-text">Email address: {{ student.email }}</p>
-                        <a href="{% url 'list_of_students' %}" class="btn btn-secondary">Go back</a>
+                        <a href="{% url 'list-of-students' %}" class="btn btn-secondary">Go back</a>
                     </div>
                     <div class="card-footer text-muted">
                        Created at: {{ student.created_at|date:"d-m-Y H:i" }}/ Updated at {{ student.updated_at|date:"d-m-Y H:i" }}

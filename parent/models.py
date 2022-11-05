@@ -13,8 +13,8 @@ def phone(value):
 class Parent(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    phone_number = models.IntegerField()
-    email = models.CharField(max_length=30, validators=[phone])
+    phone_number = models.CharField(max_length=10, validators=[phone])
+    email = models.CharField(max_length=30)
     parent_type = models.CharField(max_length=11, choices=PARENT_TYPE)
 
     active = models.BooleanField(default=True)

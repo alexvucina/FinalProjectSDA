@@ -12,11 +12,6 @@ class ParentCreateView(CreateView):
     form_class = ParentForm
     success_url = reverse_lazy('create-parent')
 
-    def get_context_data(self, **kwargs):
-        data = super(ParentCreateView, self).get_context_data(**kwargs)
-        parents = Parent.objects.all()
-        data['all_parents'] = parents
-
 
 class ParentsListView(ListView):
     template_name = 'parent/list_of_parents.html'
@@ -28,3 +23,21 @@ class ParentsListView(ListView):
         parents = Parent.objects.all()
         data['all_parents'] = parents
         return data
+
+
+class ParentUpdateView(UpdateView):
+    template_name = 'parent/update_parent.html'
+    model = Parent
+    success_url = reverse_lazy('list-of-parents')
+
+
+class ParentDeleteView(DeleteView):
+    template_name = 'parent/delete_parent.html'
+    model = Parent
+    success_url = reverse_lazy('list-of-parents')
+
+
+class ParentDetailView(DetailView):
+    template_name = 'parent/details_parent.html'
+    model = Parent
+
