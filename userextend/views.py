@@ -3,9 +3,12 @@ from django.contrib.auth.models import User
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 
+from userextend.forms import UserExtendForm
+from userextend.models import UserExtend
+
 
 class UserCreateView(CreateView):
     template_name = 'userextend/create_user.html'
-    model = User
-    form_class = UserCreationForm
+    model = UserExtend
+    form_class = UserExtendForm
     success_url = reverse_lazy('homepage')

@@ -10,7 +10,7 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'homepage' %}">Home</a>
                 </li>
-
+                {% if request.user.is_authenticated %}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
@@ -45,23 +45,24 @@
 {#                        {% endif %}#}
                     </ul>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                        aria-expanded="false">
                         Parents
                     </a>
                     <ul class="dropdown-menu">
-{#                        {% if perms.book.add_book %}#}
+{#                        {% if perms.book.create_parent %}#}
                             <li><a class="dropdown-item" href="{% url 'create-parent' %}">Create a new parent</a></li>
 {#                        {% endif %}#}
-{#                        {% if perms.book.view_list_of_books %}#}
+{#                        {% if perms.book.view_list_of_parents %}#}
                             <li><a class="dropdown-item" href="{% url 'list-of-parents' %}">List of parents</a></li>
 {#                        {% endif %}#}
                     </ul>
                 </li>
-
+                {% endif %}
             </ul>
-{#            {% if request.user.is_authenticated %}#}
+            {% if request.user.is_authenticated %}
                 <div class="btn-group">
                     <button type="button" class="btn btn-outline-info dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -69,14 +70,14 @@
                     </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Change password</a></li>
-                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                        <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
 
                     </ul>
                 </div>
-{#            {% else %}#}
-                <a href="#" class="btn btn-success me-2">Login</a>
+            {% else %}
+                <a href="{% url 'login' %}" class="btn btn-success me-2">Login</a>
                 <a href="{% url 'sign-up' %}" class="btn btn-primary">Sign up</a>
-{#            {% endif %}#}
+            {% endif %}
         </div>
     </div>
 </nav>
