@@ -29,5 +29,6 @@ urlpatterns = [
     path('', include('django.contrib.auth.urls')),
     path('', include('userextend.urls')),
     path('login/', views.LoginView.as_view(), name='login'),
-    path('logout/', views.LogoutView.as_view(template_name='home/homepage.html'), name='logout')
+    path('logout/', views.LogoutView.as_view(template_name='home/homepage.html'), name='logout'),
+    path('', include('add_grade.html')),
 ]

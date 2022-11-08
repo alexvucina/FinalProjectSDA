@@ -17,14 +17,14 @@
                         Students
                     </a>
                     <ul class="dropdown-menu">
-{#                        {% if perms.student.add_student %}#}
+                        {% if perms.student.add_student %}
                             <li><a class="dropdown-item" href="{% url 'create-student' %}">Create a new student</a>
                             </li>
-{#                        {% endif %}#}
-{#                        {% if perms.student.view_list_of_students %}#}
+                        {% endif %}
+                        {% if perms.student.view_list_of_students %}
                             <li><a class="dropdown-item" href="{% url 'list-of-students' %}">List of students</a>
                             </li>
-{#                        {% endif %}#}
+                        {% endif %}
                     </ul>
                 </li>
 
@@ -35,14 +35,18 @@
                         Teachers
                     </a>
                     <ul class="dropdown-menu">
-{#                        {% if perms.teacher.add_teacher %}#}
+                        {% if perms.teacher.add_teacher %}
                             <li><a class="dropdown-item" href="{% url 'create-teacher' %}">Create a new teacher</a>
                             </li>
-{#                        {% endif %}#}
-{#                        {% if perms.teacher.view_list_of_teachers %}#}
+                        {% endif %}
+                        {% if perms.teacher.add_teacher %}
+                            <li><a class="dropdown-item" href="{% url 'create-teacher' %}">Create a new teacher</a>
+                            </li>
+                        {% endif %}
+                        {% if perms.teacher.view_list_of_teachers %}
                             <li><a class="dropdown-item" href="{% url 'list-of-teachers' %}">List of teachers</a>
                             </li>
-{#                        {% endif %}#}
+                        {% endif %}
                     </ul>
                 </li>
 
@@ -52,12 +56,12 @@
                         Parents
                     </a>
                     <ul class="dropdown-menu">
-{#                        {% if perms.book.create_parent %}#}
+                        {% if perms.parent.create_parent %}
                             <li><a class="dropdown-item" href="{% url 'create-parent' %}">Create a new parent</a></li>
-{#                        {% endif %}#}
-{#                        {% if perms.book.view_list_of_parents %}#}
+                        {% endif %}
+                        {% if perms.parent.view_list_of_parents %}
                             <li><a class="dropdown-item" href="{% url 'list-of-parents' %}">List of parents</a></li>
-{#                        {% endif %}#}
+                        {% endif %}
                     </ul>
                 </li>
                 {% endif %}
@@ -65,11 +69,10 @@
             {% if request.user.is_authenticated %}
                 <div class="btn-group">
                     <button type="button" class="btn btn-outline-info dropdown-toggle" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                        My profile, {{ request.user.username }}
+                            aria-expanded="false">Logged user: {{ request.user.first_name }} {{ request.user.last_name }}
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Change password</a></li>
+                        <li><a class="dropdown-item" href="{% url 'password_change' %}">Change password</a></li>
                         <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
 
                     </ul>
