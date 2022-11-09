@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'userextend',
     'extendpermission',
     'grade',
+
 ]
 
 MIDDLEWARE = [

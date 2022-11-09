@@ -1,20 +1,16 @@
-from django.core.exceptions import ValidationError
 from django.db import models
 
-PARENT_TYPE = [('Mother', 'Mother'), ('Father', 'Father'), ('Grandmother', 'Grandmother'),
-               ('Grandfather', 'Grandfather')]
 
-
-def phone(value):
-    if not value.isdigit() or not len(str(value)) == 10:
-        raise ValidationError('Please enter only digits')
+from useful_variables import phone, PARENT_TYPE
+from student.models import Student
 
 
 class Parent(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    phone_number = models.CharField(max_length=10, validators=[phone])
+    phone_number = models.CharField(max_length=10, validators=[phone], default=None)
     email = models.CharField(max_length=30)
+    cnp = models.ManyToManyField(Student)
     parent_type = models.CharField(max_length=11, choices=PARENT_TYPE)
 
     active = models.BooleanField(default=True)

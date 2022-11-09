@@ -15,6 +15,7 @@
                             <th>Phone number</th>
                             <th>Email</th>
                             <th>Parent type</th>
+                            <th>Student CNP</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -27,6 +28,7 @@
                                 <td>{{ parent.phone_number }}</td>
                                 <td>{{ parent.email }}</td>
                                 <td>{{ parent.parent_type }}</td>
+                                <td>{{ parent.cnp }}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-light dropdown-toggle" type="button"
@@ -34,18 +36,18 @@
                                             Actions
                                         </button>
                                         <ul class="dropdown-menu">
-{#                                            {% if perms.parent.update-parent %}#}
-                                            <li><a class="dropdown-item"
-                                                   href="{% url 'update-parent' parent.id %}">Update</a></li>
-{#                                          {% endif %}#}
-{#                                          {% if perms.parent.delete_parent %}#}
-                                            <li><a class="dropdown-item"
-                                                   href="{% url 'delete-parent' parent.id %}">Delete</a></li>
-{#                                            {% endif %}#}
-{#                                          {% if perms.parent.view_parent_details %}#}
-                                            <li><a class="dropdown-item"
-                                                   href="{% url 'details-parent' parent.id %}">View details</a></li>
-{#                                          {% endif %}#}
+                                            {% if perms.parent.update_parent %}
+                                                <li><a class="dropdown-item"
+                                                       href="{% url 'update-parent' parent.id %}">Update</a></li>
+                                            {% endif %}
+                                            {% if perms.parent.delete_parent %}
+                                                <li><a class="dropdown-item"
+                                                       href="{% url 'delete-parent' parent.id %}">Delete</a></li>
+                                            {% endif %}
+                                            {% if perms.parent.view_parent_details %}
+                                                <li><a class="dropdown-item"
+                                                       href="{% url 'details-parent' parent.id %}">View details</a></li>
+                                            {% endif %}
                                         </ul>
                                     </div>
                                 </td>
