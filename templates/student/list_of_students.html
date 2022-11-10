@@ -52,18 +52,18 @@
                                             Actions
                                         </button>
                                         <ul class="dropdown-menu">
-{#                                            {% if perms.student.update_student %}#}
+                                            {% if perms.student.update_student %}
                                                 <li><a class="dropdown-item"
                                                        href="{% url 'update-student' student.id %}">Update</a></li>
-{#                                            {% endif %}#}
-{#                                            {% if perms.student.delete_student %}#}
+                                            {% endif %}
+                                            {% if perms.student.delete_student %}
                                                 <li><a class="dropdown-item"
                                                        href="{% url 'delete-student' student.id %}">Delete</a></li>
-{#                                            {% endif %}#}
-{#                                            {% if perms.student.view_student_details %}#}
+                                            {% endif %}
+                                            {% if perms.student.view_student_details %}
                                                 <li><a class="dropdown-item"
                                                        href="{% url 'details-student' student.id %}">View details</a></li>
-{#                                            {% endif %}#}
+                                            {% endif %}
                                         </ul>
                                     </div>
                                 </td>

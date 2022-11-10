@@ -1,6 +1,6 @@
 from django.db import models
 
-from useful_variables import phone
+from useful_variables import phone, LIST_OF_GRADES, TYPE_OF_ACTIVITY
 
 
 class Teacher(models.Model):
@@ -17,3 +17,10 @@ class Teacher(models.Model):
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
 
+
+class Grade(models.Model):
+    # student = models.ManyToManyField(Student, on_delete=models.CASCADE, null=True)
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE, default=None)
+    grade = models.CharField(max_length=12, choices=LIST_OF_GRADES)
+    type_of_activity = models.CharField(max_length=12, choices=TYPE_OF_ACTIVITY)
+    date = models.DateField()

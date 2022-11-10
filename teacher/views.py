@@ -3,8 +3,8 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, ListView, UpdateView, DetailView, DeleteView
 
-from teacher.forms import TeacherForm
-from teacher.models import Teacher
+from teacher.forms import TeacherForm, GradeForm
+from teacher.models import Teacher, Grade
 
 
 class TeacherCreateView(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
@@ -49,3 +49,10 @@ class TeacherDetailView(LoginRequiredMixin, PermissionRequiredMixin, DetailView)
     model = Teacher
     permission_required = 'view_teacher_details'
 
+
+class TeacherAddGrade(LoginRequiredMixin, CreateView):
+    template_name = 'teacher/add_grade.html'
+    model = Grade
+    form_class = GradeForm
+    success_url = reverse_lazy('homepage')
+    permission_required = ''
