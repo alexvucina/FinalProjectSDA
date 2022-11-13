@@ -2,6 +2,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 from useful_variables import STATUS, GENDER_CHOICES, cnp, ENROLLMENT_CHOICES
+from userextend.models import UserType
 
 
 class Student(models.Model):
@@ -12,6 +13,7 @@ class Student(models.Model):
     gender = models.CharField(max_length=6, choices=GENDER_CHOICES)
     CNP = models.CharField(primary_key=True, max_length=13, validators=[cnp])
     enrollment = models.CharField(max_length=17, choices=ENROLLMENT_CHOICES)
+    user_type = models.ForeignKey(UserType, on_delete=models.CASCADE, null=True)
 
     active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)

@@ -53,4 +53,4 @@ def cnp(value):
         raise ValidationError('CNP must contain only numbers of minimum length of 13')
 
 
-ACCOUNT_TYPE = [('Parent', 'Parent'), ('Teacher', 'Teacher')]
+

@@ -3,15 +3,16 @@ from django.db import models
 
 from useful_variables import phone, PARENT_TYPE
 from student.models import Student
+from userextend.models import UserType
 
 
 class Parent(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
-    phone_number = models.CharField(max_length=10, validators=[phone], default=None)
+    user_type = models.ForeignKey(UserType, on_delete=models.CASCADE, null=True)
     student = models.ForeignKey(Student,  null=True, on_delete=models.CASCADE, related_name='parent_student' )
+    phone_number = models.CharField(max_length=10, validators=[phone], default=None)
     email = models.CharField(max_length=30)
-    cnp = models.ForeignKey(Student, on_delete=models.CASCADE, related_name='student_cnp', default=None)
     parent_type = models.CharField(max_length=11, choices=PARENT_TYPE)
 
     active = models.BooleanField(default=True)

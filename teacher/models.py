@@ -1,6 +1,7 @@
 from django.db import models
 
 from useful_variables import phone, LIST_OF_GRADES, TYPE_OF_ACTIVITY
+from userextend.models import UserType
 
 
 class Teacher(models.Model):
@@ -9,6 +10,7 @@ class Teacher(models.Model):
     email = models.EmailField(max_length=40, default=None)
     phone_number = models.CharField(max_length=10, validators=[phone])
     address = models.CharField(max_length=50, default=None)
+    user_type = models.ForeignKey(UserType, on_delete=models.CASCADE, null=True)
 
     active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)

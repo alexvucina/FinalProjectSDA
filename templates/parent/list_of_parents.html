@@ -12,10 +12,11 @@
                         <tr>
                             <th>First name</th>
                             <th>Last name</th>
+                            <th>Student name</th>
+                            <th>Student CNP</th>
                             <th>Phone number</th>
                             <th>Email</th>
                             <th>Parent type</th>
-                            <th>Student CNP</th>
                             <th>Actions</th>
                         </tr>
                         </thead>
@@ -25,10 +26,11 @@
                             <tr>
                                 <td>{{ parent.first_name }}</td>
                                 <td>{{ parent.last_name }}</td>
+                                <td>{{ parent.student }}</td>
+                                <td>{{ parent.student_id }}</td>
                                 <td>{{ parent.phone_number }}</td>
                                 <td>{{ parent.email }}</td>
                                 <td>{{ parent.parent_type }}</td>
-                                <td>{{ parent.cnp }}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-light dropdown-toggle" type="button"

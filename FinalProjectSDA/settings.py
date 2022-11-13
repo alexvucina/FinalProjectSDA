@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'administration',
     'userextend',
     'extendpermission',
-    'grade',
 
 ]
 

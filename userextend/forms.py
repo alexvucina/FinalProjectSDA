@@ -1,18 +1,18 @@
+from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordResetForm, SetPasswordForm
 from django.contrib.auth.models import User
 from django.forms import TextInput, EmailInput, DateInput, IntegerField, Select
 
-from userextend.models import UserExtend
+from userextend.models import UserExtend, UserType
 
 
 class UserExtendForm(UserCreationForm):
     class Meta:
         model = UserExtend
-        fields = ['account_type', 'first_name', 'last_name', 'username', 'date_of_birth', 'gender', 'phone',
+        fields = ['first_name', 'last_name', 'username', 'date_of_birth', 'gender', 'phone',
                   'email']
 
         widgets = {
-            'account_type': Select(attrs={'class': 'form-control'}),
             'first_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Please enter your first name'}),
             'last_name': TextInput(attrs={'class': 'form-control', 'placeholder': 'Please enter your last name'}),
             'email': EmailInput(attrs={'class': 'form-control', 'placeholder': 'Please enter your email'}),
@@ -20,7 +20,11 @@ class UserExtendForm(UserCreationForm):
             'date_of_birth': DateInput(attrs={'class': 'form-control', 'type': 'date'}),
             'gender': Select(attrs={'class': 'form-control'}),
             'phone': TextInput(attrs={'class': 'form-control', 'placeholder': 'Please enter your phone number'})
+
         }
+
+    user_type = forms.ModelChoiceField(
+        label="", queryset=UserType.objects.all(), empty_label="---Select user type---")
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -28,6 +32,7 @@ class UserExtendForm(UserCreationForm):
                                                       'placeholder': 'Please enter your password'})
         self.fields['password2'].widget.attrs.update({'class': 'form-control',
                                                       'placeholder': 'Please confirm your password'})
+
 
 
 class AuthenticationNewForm(AuthenticationForm):
